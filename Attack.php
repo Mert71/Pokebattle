@@ -10,4 +10,8 @@ class Attack
         $this->Name = $attname;
         $this->AttackPoints = $atp;
     }
-} 
+
+    public function GetName() {
+      return $this->Name;
+    }
+}

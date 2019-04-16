@@ -1,5 +1,5 @@
 <?php
-class Pokemon
+ class Pokemon
 {
     public $EnergyType;
     public $Name;
@@ -18,20 +18,32 @@ class Pokemon
         $this->Attack = [];
     }
 
-    function DoAttack($pokemon, $pokemon2, $target)
+    public function AddAttack(Attack $a) {
+      $this->Attack[] = $a;
+    }
+
+    public function GetName() {
+      return $this->Name;
+    }
+
+    public function GetHealth() {
+      return $this->Health;
+    }
+
+    function DoAttack($target)
     {
-        echo $this->Name . ' Will attack ' . $target->Name . ' Using ' . $this->Attack[0]->Name;
+        echo $this->Name . ' Will attack ' . $target->Name . ' Using ' . $this->Attack[0]->GetName();
         echo '<br>';
-        if ($pokemon->EnergyType == $pokemon2->Weakness->EnergyType) {
-            $pokemon2->Health = $pokemon2->Health - ($pokemon->Attack[0]->AttackPoints * $pokemon2->Weakness->Multiplier);
+        if ($this->EnergyType == $target->Weakness->EnergyType) {
+            $target->Health = $this->Health - ($this->Attack[0]->AttackPoints * $target->Weakness->Multiplier);
         } else {
-            $pokemon2->Health = $pokemon2->Health - $pokemon->Attack[0]->AttackPoints;
+            $target->Health = $this->Health - $this->Attack[0]->AttackPoints;
         }
 
-        if ($pokemon2->Health < 1) {
-            echo $pokemon2->Name . " Has Died ";
+        if ($target->GetHealth() < 1) {
+            echo $target->GetName() . " Has Died ";
         } else {
-            echo $pokemon2->Name . " Now Has " . $pokemon2->Health . " HP Left";
+            echo $target->GetName() . " Now Has " . $target->GetHealth() . " HP Left";
         }
-    } 
+    }
 }
