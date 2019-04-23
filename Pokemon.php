@@ -30,12 +30,13 @@
       return $this->Health;
     }
 
+
     function DoAttack($target)
     {
         echo $this->Name . ' Will attack ' . $target->Name . ' Using ' . $this->Attack[0]->GetName();
         echo '<br>';
         if ($this->EnergyType == $target->Weakness->EnergyType) {
-            $target->Health = $this->Health - ($this->Attack[0]->AttackPoints * $target->Weakness->Multiplier);
+            $target->Health = $this->GetHealth(); - ($this->Attack[0]->AttackPoints * $target->Weakness->Multiplier);
         } else {
             $target->Health = $this->Health - $this->Attack[0]->AttackPoints;
         }
