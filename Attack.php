@@ -15,3 +15,4 @@ class Attack
       return $this->Name;
     }
 }
+?>

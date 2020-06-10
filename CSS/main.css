@@ -1,0 +1,56 @@
+body{
+background-image: url(CSS/battleplaceyen.png);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.pikaInfo {
+  margin-left: 70%;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: verdana;
+  width: 750px;
+  height: 150px;
+  background-color: yellow;
+  position: absolute;
+  bottom: 0;
+}
+
+#pikaFoto{
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+}
+#charmFoto{
+  width: 200px;
+  height: 140px;
+  position: absolute;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+}
+
+.charInfo{
+  font-weight: bold;
+  font-size: 28px;
+  font-family: verdana;
+  width: 750px;
+  height: 150px;
+  background-color: orange;
+  padding-left: 200px;
+}
+
+.battleInfo{
+  font-weight: bold;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  margin-left: 35%;
+  margin-top: 15%;
+}
