@@ -7,11 +7,8 @@ require 'Pokemon.php'; require 'Attack.php'; require 'Resistance.php'; require '
 $Pikachu = new Pikachu();
 
 
-
 $Charmeleon = new Charmeleon();
 ?>
-
-
 
 
 <div class="charInfo">
@@ -21,11 +18,9 @@ echo $Charmeleon->Name . " HP " . $Charmeleon->Health . "/" . $Charmeleon->Hitpo
 </div>
 <img id="charmFoto" src="CSS/charm.png" alt="">
 
-
 <?php
 echo '<br>';
 ?>
-
 
 <div class="pikaInfo">
     <img id="pikaFoto" src="CSS/pika.png" alt="">

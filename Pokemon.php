@@ -30,7 +30,6 @@
       return $this->Health;
     }
 
-
     function DoAttack($target)
     {
         echo $this->Name . ' will attack ' . $target->Name . ' using ' . $this->Attack[0]->GetName();
