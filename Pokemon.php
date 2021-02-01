@@ -9,9 +9,8 @@
     public $Weakness;
     public $Resistance;
 
-    public function __construct($nm, $healthp, $hitp, $et)
+    public function __construct($healthp, $hitp, $et)
     {
-        $this->Name = $nm;
         $this->EnergyType = $et;
         $this->Health = $healthp;
         $this->Hitpoints = $hitp;
